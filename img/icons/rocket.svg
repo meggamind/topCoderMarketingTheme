@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="57px" height="57px" viewBox="0 0 57 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/illustration/rocket</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-636.000000, -212.000000)">
+        <g id="icon/illustration/rocket" transform="translate(636.000000, 213.000000)">
+            <g>
+                <rect id="Rectangle" x="0" y="0" width="56" height="56"></rect>
+                <path d="M35,6 L50,21 C52.7921438,15.0727353 54.4739535,8.44621158 55.0454292,1.1204289 C47.9561158,1.33092648 41.2743061,2.95745018 35,6 Z" id="Shape" fill="#CEE6FF"></path>
+                <path d="M35,6 L50,21" id="Shape" stroke="#444444" stroke-width="2"></path>
+                <path d="M28,9.59135251 C20.7363605,6.51892882 11.9881633,7.89516948 6.0561496,13.7225168 C4.83891182,14.9180266 3.83552991,16.2380942 3,17.6289887 L11.5231511,26" id="Shape" stroke="#444444" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M46.3562049,28 C49.4980679,35.2588631 48.1336296,44.0130719 42.2836001,49.9573183 C41.0909347,51.1691919 39.7740081,52.1681521 38.386423,53 L30,44.4785106" id="Shape" stroke="#444444" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M23.1540386,47 L9,32.8459614 C9,32.8459614 21.0898559,2.76894207 55,1 C53.0834376,34.7625238 23.1540386,47 23.1540386,47 Z" id="Shape" stroke="#444444" stroke-width="2" stroke-linecap="square"></path>
+                <circle id="Oval" stroke="#444444" stroke-width="2" fill="#CEE6FF" stroke-linecap="square" cx="31" cy="24" r="5"></circle>
+                <path d="M1,49 C1,45.6868 3.6868,43 7,43 C10.3132,43 13,45.6868 13,49 C13,52.3132 10.3132,55 7,55 C5.65,55 1,55 1,55 C1,55 1,50.9644 1,49 Z" id="Shape" stroke="#444444" stroke-width="2" fill="#FFE3CF" stroke-linecap="square"></path>
+            </g>
+        </g>
+    </g>
+</svg>

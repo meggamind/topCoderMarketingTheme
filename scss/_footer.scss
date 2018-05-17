@@ -1,0 +1,95 @@
+@import 'tc-includes';
+
+// customize footer wrapper
+$footer-bg: $tc-black;
+$footer-padding: $base-unit*8 $base-unit*6 $base-unit*6;
+
+// customize footer links
+$footer-font-size: $tc-label-xs;
+$footer-link-color: $tc-gray-50;
+$footer-label-color: $tc-white;
+
+.footer-wrap {
+  padding: $footer-padding;
+  background: $footer-bg;
+  // align center the tc logo
+  .logo {
+    display: block;
+    width: 54px;
+    margin: 0 auto;
+  }
+}
+
+.footer-menu {
+  margin-top: $base-unit*6 !important;
+  display: flex;
+  @include maxWidth;
+  @media screen and (max-width: $screen-md) {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  // hide some component for tablet, mobile site
+  .hide-for-tablet-mobile {
+    @media screen and (max-width: $screen-sm), screen and (max-width: $screen-md) {
+      display: none;
+    }
+    display: block;
+  }
+  .show-for-tablet-mobile {
+    &.left-menu {
+      @media screen and (max-width: $screen-md) {
+        padding: 0 80px;
+      } 
+      @media screen and (max-width: $screen-sm) {
+        padding: 0;
+      }
+      flex-grow: 2.3;
+    }
+    @media screen and (max-width: $screen-sm), screen and (max-width: $screen-md) {
+      padding: 0;
+      display: block;
+    }
+    display: none;
+    .bottom-sub-list {
+      &.is-show {
+        max-height: 100%;
+        transition: max-height 0.05s ease-out;
+      }
+      transition: max-height 0.15s ease-out;
+      margin-left: 5px;
+      max-height: 0;
+      overflow: hidden;
+    }
+    a {
+      font-size: $tc-label-md;
+    }
+  }
+
+  // make the footer columns of equal widths
+  > * {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 0 $base-unit*6;
+  }
+  .highlight {
+    color: $footer-label-color;
+    font-size: $tc-label-md;
+    @include roboto-bold;
+  }
+  a {
+    display: block;
+    color: $footer-link-color;
+    @include roboto;
+  }
+  h5 {
+    color: $footer-label-color;
+    @include roboto-bold;
+  }
+  h5, a {
+    padding: $base-unit 0;
+    line-height: 20px;
+    text-transform: uppercase;
+    font-size: $footer-font-size;
+  }
+}

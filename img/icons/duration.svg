@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="20px" height="24px" viewBox="0 0 20 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/general/duration</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-303.000000, -542.000000)" stroke-linecap="square">
+        <g id="icon/general/duration" transform="translate(304.000000, 543.000000)" stroke="#444444">
+            <g>
+                <polyline id="Shape" stroke-width="2" points="9 9 9 13 13 13"></polyline>
+                <circle id="Oval" stroke-width="2" cx="9" cy="13" r="9"></circle>
+                <path d="M6,0 L12,0" id="Shape" stroke-width="2"></path>
+                <path d="M9,0 L9,1" id="Shape" stroke-width="2"></path>
+            </g>
+        </g>
+    </g>
+</svg>

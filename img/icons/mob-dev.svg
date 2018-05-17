@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38" height="58" viewBox="0 0 38 58">
+    <defs>
+        <path id="a" d="M0 10h38v26H0z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="translate(0 1)">
+        <use fill="#CEF0AF" xlink:href="#a"/>
+        <path stroke="#262628" stroke-width="2" d="M1 11h36v24H1z"/>
+        <path stroke="#262628" stroke-linecap="square" stroke-width="2" d="M13.857 17.818L8.714 22.91 13.857 28M24.143 17.818l5.143 5.091L24.143 28"/>
+        <path stroke="#262628" stroke-linecap="square" stroke-width="2" d="M31.857 56H6.143C3.314 56 1 53.71 1 50.91V5.09C1 2.29 3.314 0 6.143 0h25.714C34.686 0 37 2.29 37 5.09v45.82c0 2.8-2.314 5.09-5.143 5.09z"/>
+        <ellipse cx="19" cy="45.818" stroke="#262628" stroke-linecap="square" stroke-width="2" rx="2.571" ry="2.545"/>
+    </g>
+</svg>

@@ -1,0 +1,306 @@
+// base icon class
+// customize the general feeling of an icon
+.ic {
+  display: inline-block;
+  vertical-align: middle;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  // default size
+  width: 24px;
+  height: 24px;
+  
+  // small size
+  &.ic-s {
+    width: 16px;
+    height: 16px;
+  }
+
+  // medium size
+  &.ic-m {
+    width: 18px;
+    height: 18px;
+  }
+
+  // large size
+  &.ic-l {
+    width: 32px;
+    height: 32px;
+  }    
+  // extra large size
+  &.ic-xl {
+    width: 56px;
+    height: 56px;
+ }
+ &.ic-xxl{
+   height: 100px;
+   width: 100px;
+  }
+  
+  /*
+  @media screen and (max-width: $screen-sm), screen and (max-width: $screen-md) {
+    // default size
+      width: 48px;
+      height: 48px;
+      
+      // small size
+      &.ic-s {
+        width: 32px;
+        height: 32px;
+      }
+  
+      // medium size
+      &.ic-m {
+        width: 36px;
+        height: 36px;
+      }
+  
+      // large size
+      &.ic-l {
+        width: 64px;
+        height: 64px;
+      }    
+      // extra large size
+      &.ic-xl {
+        width: 112px;
+        height: 112px;
+      }
+      &.ic-xxl{
+        height: 200px;
+        width: 200px;
+      }
+    }
+  */
+}
+
+// ilustration icons
+.ic-connect {
+  background-image: url('img/icons/connect.svg');
+}
+
+.ic-globe {
+  background-image: url('img/icons/globe.svg');
+}
+
+.ic-idea {
+  background-image: url('img/icons/idea.svg');
+}
+
+.ic-manager {
+  background-image: url('img/icons/manager.svg');
+}
+
+.ic-blue-rocket {
+  background-image: url('img/icons/blue-rocket.svg');
+}
+
+.ic-blue-members{
+  background-image: url('img/icons/blue-members.svg');
+}
+
+.ic-blue-assistance{
+  background-image: url('img/icons/blue-assistance.svg');
+}
+
+.ic-blue-progress{
+  background-image: url('img/icons/blue-progress.svg');
+}
+
+.ic-money {
+  background-image: url('img/icons/money.svg');
+}
+
+.ic-rapid {
+  background-image: url('img/icons/rapid.svg');
+}
+
+.ic-rocket {
+  background-image: url('img/icons/rocket.svg');
+}
+
+.ic-win {
+  background-image: url('img/icons/win.svg');
+}
+
+.ic-cognitive {
+  background-image: url('img/icons/cognitive.svg');
+}
+
+.ic-web-dev {
+  background-image: url('img/icons/web-dev.svg');
+}
+
+.ic-mob-dev {
+  background-image: url('img/icons/mob-dev.svg');
+}
+
+.ic-scan {
+  background-image: url('img/icons/scan.svg');
+}
+
+.ic-mob-design {
+  background-image: url('img/icons/mob-design.svg');
+}
+
+.ic-members {
+  background-image: url('img/icons/members.svg');
+}
+
+.ic-time {
+  background-image: url('img/icons/time.svg');
+}
+.ic-filter {
+  background-image: url('img/icons/filter.svg');
+}
+
+.ic-group {
+  background-image: url('img/icons/group.svg');
+}
+
+.ic-method {
+  background-image: url('img/icons/method.svg');
+}
+
+.ic-web-design{
+ background-image: url('img/icons/web-design.svg');
+}
+
+.ic-app-dev {
+  background-image: url('img/icons/app-dev.svg');
+}
+
+// general icons
+.ic-duration {
+  background-image: url('img/icons/duration.svg');
+}
+
+.ic-product {
+  background-image: url('img/icons/product.svg');
+}
+
+.ic-search {
+  background-image: url('img/icons/search.svg');
+}
+
+.ic-user {
+  background-image: url('img/icons/user.svg');
+}
+
+.ic-calendar {
+  background-image: url('img/icons/calendar.svg');
+}
+
+.ic-carret-up {
+  background-image: url('img/icons/carret-up.svg');
+}
+
+.ic-carret-right {
+  background-image: url('img/icons/carret-right.svg');
+}
+
+.ic-carret-down {
+  background-image: url('img/icons/carret-down.svg');
+}
+
+.ic-carret-left {
+  background-image: url('img/icons/carret-left.svg');
+}
+
+// TODO : use SVG image instead off PNG image
+.ic-play-icon {
+  background-image: url('img/icons/play-icon.png');
+}
+
+// TODO : use SVG image instead off PNG image
+.ic-play-icon-2 {
+  background-image: url('img/icons/play-icon-2.png');
+}
+
+// TODO : use SVG image instead off PNG image
+.ic-pdf-file-icon {
+  background-image: url('img/icons/pdf-file.png');
+}
+
+// product icons
+.ic-website {
+  background-image: url('img/icons/product/website.svg');
+}
+
+.ic-app {
+  background-image: url('img/icons/product/app.svg');
+  &.ic-xl {
+    background-image: url('img/icons/app.svg');
+  }
+}
+
+.ic-design {
+  background-image: url('img/icons/product/cat/design.svg');
+}
+
+.ic-development {
+  background-image: url('img/icons/product/cat/development.svg');
+}
+
+.ic-qa {
+  background-image: url('img/icons/product/cat/qa.svg');
+}
+
+.ic-chat1 {
+  background-image: url('img/icons/product/chatbot/model1.svg');
+}
+
+.ic-chat2 {
+  background-image: url('img/icons/product/chatbot/model2.svg');
+}
+
+.ic-app-visual {
+  background-image: url('img/icons/product/design/app-visual.svg');
+}
+
+.ic-design-other {
+  background-image: url('img/icons/product/design/other.svg');
+}
+
+.ic-wireframe {
+  background-image: url('img/icons/product/design/wireframes.svg');
+  &.ic-xl {
+    background-image: url('img/icons/wireframe.svg');
+  }
+}
+
+.ic-front-end-dev {
+  background-image: url('img/icons/product/dev/front-end-dev.svg');
+}
+
+.ic-integration {
+  background-image: url('img/icons/product/dev/integration.svg');
+}
+
+.ic-dev-other {
+  background-image: url('img/icons/product/dev/other.svg');
+}
+
+.ic-prototype {
+  background-image: url('img/icons/product/dev/prototype.svg');
+}
+
+.ic-consulting {
+  background-image: url('img/icons/product/qa/consulting.svg');
+}
+
+.ic-digital-accessability {
+  background-image: url('img/icons/product/qa/digital-accessability.svg');
+}
+
+.ic-mobility-testing {
+  background-image: url('img/icons/product/qa/mobility-testing.svg');
+}
+
+.ic-os-automation {
+  background-image: url('img/icons/product/qa/os-automation.svg');
+}
+
+.ic-website-performance {
+  background-image: url('img/icons/product/qa/website-performance.svg');
+}

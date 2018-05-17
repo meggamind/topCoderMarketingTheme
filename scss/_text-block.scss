@@ -1,0 +1,120 @@
+@import 'tc-includes';
+
+// TEXT BLOCK COMPONENT (used in content box component and feature component)
+// text block vars
+$text-block-wrap-padding: $base-unit*8;
+$text-block-corner-radius: $corner-radius*3;
+$text-block-vertical-margin: $base-unit*4;
+$text-block-body-line-height: $base-unit*5;
+$text-block-header-line-height: $base-unit*9;
+
+$text-block-wrap-padding-mobile: $base-unit*6;
+$text-block-vertical-margin-mobile: $base-unit*2;
+
+// text block stylings
+$text-block-wrap-header-text-color: $tc-black;
+$text-block-wrap-body-text-color: $tc-gray-80;
+$text-block-wrap-background-color: $tc-white;
+$text-block-header-font-size: $tc-heading-ml;
+
+$text-block-header-font-size-mobile: $tc-heading-lg;
+$text-block-body-font-size-mobile: $tc-body-md;
+
+// text block default vars
+$text-block-default-width-percentage: 57.65625%;
+
+// text block primary stylings
+$text-block-wrap-primary-background-color: $tc-dark-blue-90;
+$text-block-wrap-primary-header-text-color: $tc-white;
+$text-block-wrap-primary-body-text-color: $tc-white;
+
+// text block secondary stylings
+$text-block-wrap-secondary-background-color: $tc-gray-90;
+$text-block-wrap-secondary-header-text-color: $tc-white;
+$text-block-wrap-secondary-body-text-color: $tc-white;
+
+.text-block-wrap {
+  padding: $text-block-wrap-padding;
+  background-color: $text-block-wrap-background-color;
+  position: relative;
+  @media screen and (max-width: $screen-sm), screen and (max-width: $screen-md) {
+    padding: $text-block-wrap-padding-mobile;
+  }
+  &.alt{
+    padding: 30px;
+  }
+
+  .header {
+    @include roboto-light();
+    font-size: $text-block-header-font-size;
+    line-height: $text-block-header-line-height;
+    margin-bottom: $text-block-vertical-margin;
+    @media screen and (max-width: $screen-sm), screen and (max-width: $screen-md) {
+      font-size: $text-block-header-font-size-mobile;
+      margin-bottom: $text-block-vertical-margin-mobile;
+    }
+
+    &.seperation-b-xs{
+      margin-bottom: $base-unit*2;
+    }
+  }
+
+  .body {
+    margin: $text-block-vertical-margin 0;
+    line-height: $text-block-body-line-height;
+    color: $text-block-wrap-body-text-color;
+    @media screen and (max-width: $screen-sm), screen and (max-width: $screen-md) {
+      margin: $text-block-vertical-margin-mobile 0;
+      font-size: $text-block-body-font-size-mobile;
+    }
+
+    &.sticky{
+      margin: 0;
+    }
+
+    &.tc-label-lg {
+      line-height: 20px;
+    }
+    p{
+      margin-bottom: 1em;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .footer {
+    margin-top: $text-block-vertical-margin;
+  }
+
+  &.text-block-default {
+    width: $text-block-default-width-percentage;
+    border-radius: $text-block-corner-radius;
+    box-shadow: 0 2px 9px 0 rgba(38, 38, 40, 0.35);
+  }
+
+  &.text-block-primary {
+    background-color: $text-block-wrap-primary-background-color;
+
+    .header {
+      color: $text-block-wrap-primary-header-text-color;
+    }
+
+    .body {
+      color: $text-block-wrap-primary-body-text-color;
+    }
+  }
+
+  &.text-block-secondary {
+    background-color: $text-block-wrap-secondary-background-color;
+
+    .header {
+      color: $text-block-wrap-secondary-header-text-color;
+    }
+
+    .body {
+      color: $text-block-wrap-secondary-body-text-color;
+      font-size: $text-block-body-font-size-mobile;
+    }
+  }
+}

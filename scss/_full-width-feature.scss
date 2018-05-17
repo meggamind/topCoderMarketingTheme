@@ -1,0 +1,178 @@
+@import 'tc-includes';
+
+// FEATURE COMPONENT GENERAL
+//
+// feature component vars
+$feature-container-top: $base-unit*20;
+$feature-media-height: $base-unit*127;
+$feature-info-top: $base-unit*40;
+$feature-info-horizontal-padding: $base-unit*8;
+$feature-item-vertical-margin: $base-unit*10;
+$feature-item-left-spacing: $base-unit*6;
+
+// feature component stylings
+$feature-item-number-font-size: $tc-heading-xl;
+$feature-item-number-text-color: $tc-black;
+$feature-item-text-font-size: $tc-body-lg;
+$feature-item-text-text-color: $tc-gray-70;
+
+// FEATURE 2 COMPONENT GENERAL
+//
+// feature 2 component vars
+$feature2-carousel-navigation-right: $base-unit*4.8;
+$feature2-carousel-navigation-top: $base-unit*124;
+
+// feature 2 component stylings
+$feature2-item-text-text-color: $tc-gray-80;
+
+
+.full-width-feature-wrap {
+  @include roboto();
+  position: relative;
+
+  .text-block-wrap {
+    position: absolute;
+    z-index: 1;
+
+    .footer {
+      .tc-btn {
+        @include roboto-medium();
+      }
+    }
+  }
+
+  .feature-container {
+    display: flex;
+    padding-top: $feature-container-top;
+
+    .left-panel {
+      flex-grow: 1;
+      position: relative;
+    }
+
+    .right-panel {
+      line-height: 0;
+      flex: 0 0 75%;
+      position: relative;
+
+      .icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+      }
+
+      // youtube player, when hover to the block, the cursor will be pointer
+      .ytplayer {
+        cursor: pointer;
+      }
+    }
+
+    iframe, img.media {
+      width: 100%;
+      height: $feature-media-height;
+      object-fit: cover;
+    }
+  }
+
+  .feature-container-2 {
+    display: block;
+
+    .left-panel {
+      width: 33.3333333%;
+    }
+
+    .feature-info {
+      @include tc-body();
+      color: $feature2-item-text-text-color;
+    }
+
+    .carousel-wrap {
+      display: flex;
+      @media (min-width:$screen-md) and (max-width:$screen-xxmd) {
+        display: block;
+        .left-panel {
+          padding-top: 20px;
+        }
+        .feature-info {
+          display: block;
+        }
+      }
+      .carousel-navigation {
+        position: absolute;
+        top: $feature2-carousel-navigation-top;
+        right: $feature2-carousel-navigation-right;
+      }
+
+      .carousel-slider {
+        flex: 0 0 25%;
+      }
+
+      .carousel-slider-item-wrap {
+        display: flex;
+      }
+    }
+  }
+
+  .feature-info {
+    padding: 0 $feature-info-horizontal-padding;
+    position: absolute;
+    left: 0;
+    top: $feature-info-top;
+    right: 0;
+  }
+
+  .feature-item {
+    display: flex;
+    align-items: center;
+    margin: $feature-item-vertical-margin 0;
+
+    .info {
+      margin-left: $feature-item-left-spacing;
+
+      &-number {
+        font-size: $feature-item-number-font-size;
+        color: $feature-item-number-text-color;
+      }
+
+      &-text {
+        @include roboto-light();
+        font-size: $feature-item-text-font-size;
+        color: $feature-item-text-text-color;
+      }
+    }
+  }
+}
+
+// fix for small desktop or tablet
+@media (min-width:$screen-md) and (max-width:$screen-xxmd) {
+  .full-width-feature-wrap .text-block-wrap {
+    position: static;
+    width: 100%;
+  }
+
+  .full-width-feature-wrap .feature-container {
+    padding-top: 0;
+    display: block;
+  }
+
+  .full-width-feature-wrap .feature-info {
+    position: static;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .full-width-feature-wrap .feature-container-2 .carousel-wrap .carousel-slider-item-wrap {
+    display: block;
+  }
+
+  .full-width-feature-wrap .feature-container-2 .left-panel {
+    width: 100%;
+  }
+
+  .full-width-feature-wrap .feature-container-2 .carousel-wrap .carousel-navigation {
+    position: static;
+    margin: 10px 0;
+    justify-content: center;
+  }
+}

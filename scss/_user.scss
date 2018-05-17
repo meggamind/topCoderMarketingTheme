@@ -1,0 +1,29 @@
+@import 'tc-includes';
+
+// user avatar block
+$user-avatar-margin-right: $base-unit*2;
+$user-name-text-color: $tc-black;
+$user-role-text-color: $tc-gray-80;
+
+.user {
+  display: flex;
+  align-items: center;
+
+  .user-avatar {
+    width: $user-avatar-default-width;
+    height: $user-avatar-default-height;
+    margin-right: $user-avatar-margin-right;
+    border-radius: $user-avatar-round-radius;
+  }
+
+  .name {
+    @include tc-heading-small();
+    @include roboto-bold();
+    color: $user-name-text-color;
+  }
+
+  .role {
+    color: $user-role-text-color;
+    font-size: $tc-body-sm;
+  }
+}

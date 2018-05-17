@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/illustration/connect</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-109.000000, -213.000000)">
+        <g id="icon/illustration/connect" transform="translate(109.000000, 213.000000)">
+            <g>
+                <rect id="Rectangle" x="0" y="0" width="56" height="56"></rect>
+                <g id="world-2" transform="translate(11.000000, 11.000000)" stroke="#262628" stroke-width="2">
+                    <path d="M4.17272727,28.2045455 C7.26363636,24.65 11.9,22.4090909 17,22.4090909 C22.1,22.4090909 26.6590909,24.65 29.75,28.2045455" id="Shape"></path>
+                    <path d="M4.17272727,5.79545455 C7.26363636,9.35 11.9,11.5909091 17,11.5909091 C22.1,11.5909091 26.6590909,9.35 29.75,5.79545455" id="Shape"></path>
+                    <path d="M17,34 C23.0272727,31.1409091 26.2727273,24.5727273 26.2727273,17 C26.2727273,9.42727273 23.0272727,2.85909091 17,0" id="Shape"></path>
+                    <path d="M17,34 C10.9727273,31.1409091 7.72727273,24.5727273 7.72727273,17 C7.72727273,9.42727273 10.9727273,2.85909091 17,0" id="Shape"></path>
+                    <polyline id="Shape" points="17 34 17 32.4545455 17 1.54545455 17 0"></polyline>
+                    <path d="M0,17 L34,17" id="Shape"></path>
+                    <circle id="Oval" stroke-linecap="square" cx="17" cy="17" r="17"></circle>
+                </g>
+                <circle id="Oval-2" stroke="#262628" stroke-width="2" fill="#FFE3CF" stroke-linecap="square" cx="45" cy="11" r="3"></circle>
+                <circle id="Oval-2" stroke="#262628" stroke-width="2" fill="#CEF0AF" stroke-linecap="square" cx="11" cy="11" r="3"></circle>
+                <circle id="Oval-2" stroke="#262628" stroke-width="2" fill="#CEF0AF" stroke-linecap="square" cx="45" cy="45" r="3"></circle>
+                <circle id="Oval-2" stroke="#262628" stroke-width="2" fill="#FFE3CF" stroke-linecap="square" cx="11" cy="45" r="3"></circle>
+                <circle id="Oval-2" stroke="#262628" stroke-width="2" fill="#CEE6FF" stroke-linecap="square" cx="28" cy="4" r="3"></circle>
+                <circle id="Oval-2" stroke="#262628" stroke-width="2" fill="#CEE6FF" stroke-linecap="square" cx="52" cy="28" r="3"></circle>
+                <circle id="Oval-2" stroke="#262628" stroke-width="2" fill="#CEE6FF" stroke-linecap="square" cx="28" cy="52" r="3"></circle>
+                <circle id="Oval-2" stroke="#262628" stroke-width="2" fill="#CEE6FF" stroke-linecap="square" cx="4" cy="28" r="3"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

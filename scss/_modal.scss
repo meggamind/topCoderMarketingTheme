@@ -1,0 +1,47 @@
+// modal
+.modal-wrap{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+  background-color: rgba(72, 72, 73, 0.95);
+  display: none;
+
+  &.active{
+    display: flex;
+  }
+  
+  .modal{
+    background-color: #fff;
+    z-index: 10;
+    width: calc(100% - 100px);
+    height: auto;
+    max-width: $base-unit*166;
+    max-height: $base-unit*119;
+    min-height: $base-unit*95;
+    padding: 10px;
+    position: relative;
+    
+    @media screen and (max-width: $screen-md) {
+      min-height: 0;
+    }
+    
+    .btn-close {
+      position: absolute;
+      right: -50px;
+      top: -12px;
+      width: 48px;
+      height: 48px;
+      background: url('img/icons/x.svg') 50% 50% no-repeat;
+      background-size: 28px;
+    }
+
+    .video-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

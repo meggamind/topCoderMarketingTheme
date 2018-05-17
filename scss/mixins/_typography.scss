@@ -1,0 +1,224 @@
+// Mixins
+
+// Table of Contents
+//
+// Font families
+// Labels
+// Body
+// Headings
+// Common
+
+// Font families and weights
+@mixin roboto-light {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+
+@mixin roboto {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+
+@mixin roboto-medium {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+}
+
+@mixin roboto-bold {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+}
+
+// Labels
+@mixin tc-label-lg {
+  @include roboto;
+  font-size: $tc-label-lg;
+  line-height: $base-unit * 4;
+}
+
+@mixin tc-label-md {
+  @include roboto;
+  font-size: $tc-label-md;
+  line-height: $base-unit * 4;
+}
+
+@mixin tc-label-sm {
+  @include roboto;
+  font-size: $tc-label-sm;
+  line-height: $base-unit * 3;
+}
+
+@mixin tc-label-xs {
+  @include roboto;
+  font-size: $tc-label-xs;
+  line-height: $base-unit * 3;
+}
+
+// Body
+@mixin tc-body-large {
+  @include roboto;
+  font-size: $tc-body-lg;
+  line-height: 1.75;
+}
+
+@mixin tc-body {
+  @include roboto;
+  font-size: $tc-body-md;
+  line-height: $base-unit * 5;
+}
+
+@mixin tc-body-small {
+  @include roboto;
+  font-size: $tc-body-sm;
+  line-height: $base-unit * 5;
+}
+
+@mixin tc-body-extra-small {
+  @include roboto;
+  font-size: $tc-body-xs;
+  line-height: $base-unit * 4;
+}
+
+// Headings
+@mixin tc-heading-extra-large {
+  @include roboto;
+  font-size: $tc-heading-ml;
+  line-height: $base-unit * 10;
+}
+@mixin tc-heading-medium-large {
+  @include roboto;
+  font-size: $tc-heading-ml;
+  line-height: $base-unit * 9;
+}
+
+@mixin tc-heading-large {
+  @include roboto;
+  font-size: $tc-heading-lg;
+  line-height: $base-unit * 7;
+}
+
+@mixin tc-heading {
+  @include roboto;
+  font-size: $tc-heading-md;
+  line-height: $base-unit * 6;
+}
+
+@mixin tc-heading-small {
+  @include roboto;
+  font-size: $tc-heading-sm;
+  line-height: $base-unit * 5;
+}
+
+@mixin tc-heading-extra-small {
+  @include roboto;
+  font-size: $tc-heading-xs;
+  line-height: $base-unit * 5;
+}
+
+.italic{
+  font-style: italic;
+}
+em{
+  @extend .italic;
+}
+
+/* classes */
+.tc-body{
+  @include tc-body;
+
+  &.confined-center{
+    margin-left: $base-unit*44;
+    margin-right: $base-unit*44;
+    @media screen and (max-width: $screen-md) {
+      margin-left: $base-unit;
+      margin-right: $base-unit;
+    }
+    text-align: center;
+  }
+
+  &.confined-center-sm{
+    margin-left: $base-unit*53;
+    margin-right: $base-unit*53;
+    text-align: center;
+  }
+
+  &.light {
+    font-weight: 300;
+  }
+  &.fw-lt,
+  .fw-lt {
+    font-weight: 300;
+  }
+  &.fw-md,
+  .fw-md {
+    font-weight: 500;
+  }
+  p{
+    margin-bottom: 1em;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+.typo-label-xs {
+  @extend .tc-body;
+  @include tc-label-xs;
+}
+.tc-label-lg {
+  @extend .tc-body;
+  @include tc-label-lg;
+}
+.typo-label-lg{
+  @extend .tc-label-lg;
+  &.lh-md{
+    line-height: $base-unit*5;
+  }
+}
+.typo-body-lg{
+  @extend .tc-body;
+  @include tc-body-large;
+  &.lh-md{
+    line-height: $base-unit*7;
+  }
+}
+
+.typo-heading-large {
+  @extend .tc-body;
+  @include tc-heading-large;
+}
+
+.typo-heading-medium-large {
+  @extend .tc-body;
+  @include tc-heading-medium-large;
+}
+
+.typo-heading-extra-large{
+  @extend .tc-body;
+  @include tc-heading-extra-large;
+}
+
+.typo-label-md {
+  @extend .tc-body;
+  @include tc-label-md;
+}
+
+.typo-body-large {
+  @extend .tc-body;
+  @include tc-body-large;
+}
+
+.align-center{
+  text-align: center;
+}
+
+/* line-heights */
+.lh-xl{
+  line-height: 1.75;
+}
+.lh-lg{
+  line-height: 1.6;
+}
+.lh-md{
+  line-height: 1.4;
+}
+

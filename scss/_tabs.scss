@@ -1,0 +1,218 @@
+@import 'tc-includes';
+
+// wrapper stylings
+$tabs-bar-height: $base-unit*14;
+$tabs-bar-padding: $base-unit*12;
+$tabs-bar-bg: $tc-gray-neutral-dark;
+
+// tabs vars
+$tab-color: $tc-gray-80;
+$tab-active-color: $tc-white;
+
+// the tabs wrapper is inheriting the height of the tabs bar
+// so it can serve as a placeholder when tabs is positioned fixed
+.tabs-bar-wrap {
+  height: $tabs-bar-height;
+  background-color: $tc-gray-neutral-dark;
+  // make it fixed at top
+  &.fixed .tabs-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+  }
+  &.has-top .tabs-bar {
+    top: $base-unit*12;
+  }
+}
+  
+// tabs bar element
+.tabs-bar {
+  width: 100%;
+  height: $tabs-bar-height;
+  padding: 0 $tabs-bar-padding;
+  background-color: $tabs-bar-bg;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include tc-label-lg;
+  line-height: 1;
+
+  &.viewport{
+    
+    @media screen and (max-width: $screen-md) {
+      padding-left: $base-unit*4;
+      padding-right: 0;
+    }
+
+    // Tab menu part
+    > div:first-child{
+      white-space: nowrap;
+      overflow: auto;
+      &::-webkit-scrollbar{
+        display: none;
+      }
+      .tab{
+        &:first-child{
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  // Filter part
+  > div:nth-child(2){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    @media screen and (max-width: $screen-sm), screen and (max-width: $screen-md) {
+      box-shadow: -3px -3px 5px 1px #cecdcd;
+    }
+  }
+
+  // tab item 
+  .tab {
+    display: inline-block;
+    margin-left: $base-unit;
+    padding: $base-unit*2 $base-unit*3;
+    color: $tab-color;
+    background-color: transparent;
+    border-radius: $corner-radius*3;
+
+    cursor: pointer;
+    transition: background-color .15s ease;
+    // active state
+    &:hover,
+    &:active,
+    &.active {
+      background-color: $tab-active-color; 
+      box-shadow: 0 1px 3px 0 rgba(38, 38, 40, 0.15);
+    }
+  }
+
+  .filter-popup{
+    width: 190px;
+    min-height: 60px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 7px 1px rgba(0, 0, 0, 0.17);
+    z-index: 99;
+    position: absolute;
+    right: 60px;
+    top: 55px;
+    border-radius: $corner-radius*2;
+    padding: $base-unit*2 $base-unit*4 $base-unit*3;
+    display: none;
+    
+    @media screen and (max-width: $screen-md) {
+      right: 0;
+    }
+
+    .list{
+      a.active{
+        font-weight: 500;
+      }
+    }
+    .taglist-group{
+      &.disabled{
+        display: block !important;
+        .taglist::before {
+          content: '(empty)';
+          display: block;
+        }
+      }
+    }
+
+    .taglist {
+      padding-top: 5px;
+      li {
+        color: #394146;
+        margin: 3px 0;
+      }
+    }
+
+    .tc-checkbox-bar .label:before{
+      border-color: $tc-gray-30;
+      background-color: transparent;
+    }
+
+    .disabled{
+      display: none;
+    }
+
+    &.open{
+      display: block;
+    }
+
+    
+    
+    &:before{
+      content: '';
+      transform: rotate(45deg);
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: #fff;
+      right: 40px;
+      top: -5px;
+    }
+  }
+
+  .radio-ctrl{
+    position: relative;
+    padding-left: 20px;
+
+    &:before{
+      content: '';
+      width: $base-unit*3;
+      height: $base-unit*3;
+      border-radius: 2px;
+      background-color: #ffffff;
+      border: solid 1px #c3c3c8;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+  .seperator-line {
+    margin: 8px 0;
+    height: 1px;
+    background-color: #f0f0f0;
+  }
+  
+  .label-el{
+    position: relative;
+    &.has-count{
+      padding-right: 25px;
+      display: inline-block;
+      .count{
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        right: 0;
+        top: 0;
+        border-radius: 9px;
+        background-color: #fd7d00;
+        color: #ffffff;
+        text-align: center;
+        line-height: 15px;  
+        @media screen and (max-width: $screen-sm), screen and (max-width: $screen-md) {
+          top: 10px;
+          right: 10px;
+        }
+      }
+    }
+
+    @media screen and (max-width: $screen-sm), screen and (max-width: $screen-md) {
+      padding: 20px;
+      
+      i{
+        width: 23px;
+        height: 26px;
+      }
+      span.label-filter{
+        display: none;
+      }
+    }
+  }
+}

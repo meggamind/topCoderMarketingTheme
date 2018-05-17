@@ -1,0 +1,253 @@
+@import 'tc-includes';
+
+// QUOTE COMPONENT
+//
+// quote vars
+$quote-height: $base-unit*88;
+$quote-wrap-image-width-percentage: 57.65625%;
+
+// carousel in quote vars
+$slider-item-padding: $base-unit*6;
+$slider-item-line-height: $base-unit*5;
+$slider-carousel-item-padding: $base-unit*6;
+$slider-item-header-margin-bottom: $base-unit*4;
+$slider-item-content-margin-bottom: $base-unit*8.5;
+$slider-item-content-margin-bottom-mobile: $base-unit*4;
+$slider-item-content-line-height: $base-unit*5.2;
+
+// carousel in quote styles
+$slider-item-header-font-size: $tc-body-lg;
+$slider-item-header-text-color: $tc-black;
+$slider-item-content-font-size: $tc-body-lg;
+$slider-item-content-text-color: $tc-gray-80;
+$slider-item-user-text-color-mobile: $tc-gray-60;
+$slider-arrow-color: $tc-dark-blue-90;
+
+$quote-mark-width: $base-unit*6;
+$quote-mark-height: $base-unit*4.4;
+$quote-mark-top: -$base-unit*2;
+$quote-mark-left: -$base-unit*6;
+
+.quote-wrap {
+  @include roboto();
+  position: relative;
+
+  .image {
+    width: $quote-wrap-image-width-percentage;
+    @media screen and (max-width: $screen-sm), screen and (max-width: $screen-md) {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+      height: $quote-height;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .content-wrap {
+    background: $tc-white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-bottom: $base-unit*4;
+    right: 0;
+    width: 50%;
+    box-shadow: 0 2px 9px 0 rgba(38, 38, 40, 0.15);
+    border-radius: $corner-radius;
+    z-index: 1;
+    @media screen and (max-width: $screen-sm), screen and (max-width: $screen-md) {
+      position: initial;
+      width: 100%;
+      transform: none;
+    }
+  }
+
+  .carousel-slider-item {
+    padding: $slider-carousel-item-padding;
+    @media screen and (max-width: $screen-sm), screen and (max-width: $screen-md) {
+      padding-top: $base-unit*30;
+    }
+  }
+  
+  .carousel-navigation {
+    display: flex;
+  }
+
+  .item-header {
+    @include roboto-bold();
+    margin-bottom: $slider-item-header-margin-bottom;
+    font-size: $slider-item-header-font-size;
+    color: $slider-item-header-text-color;
+  }
+
+  .item-content {
+    @include roboto-light();
+    font-style: oblique;
+    font-size: $slider-item-content-font-size;
+    margin-bottom: $slider-item-content-margin-bottom;
+    line-height: $slider-item-content-line-height;
+    color: $slider-item-content-text-color;
+    position: relative;
+    @media screen and (max-width: $screen-sm), screen and (max-width: $screen-md) {
+      margin-bottom: $slider-item-content-margin-bottom-mobile;
+      
+      &:before{
+        position: absolute;
+        content: '';
+        background-image: url(img/assets/quote-mark.png);
+        background-size: cover;
+        width: $quote-mark-width;
+        height: $quote-mark-height;
+        top: $quote-mark-top;
+        left: $quote-mark-left;
+      }
+    }
+  }
+
+  .user {
+    flex-direction: row-reverse;
+
+    @media screen and (max-width: $screen-sm), screen and (max-width: $screen-md) {
+      flex-direction: row;
+
+      .name, .role{
+        font-size: $tc-body-md;
+        color: $slider-item-user-text-color-mobile;
+        margin-bottom: $base-unit*2;
+      }
+      .user-avatar{
+        position: absolute;
+        top:0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        height: $base-unit*26;
+        width: $base-unit*26;
+      }
+    }
+  }
+}
+
+// QUOTE 2 COMPONENT
+//
+// quote 2 vars
+$quote2-vertical-padding: $base-unit*10;
+$quote2-horizontal-padding: $base-unit*22.6;
+$quote2-margin-left: $base-unit*14;
+$quote2-content-margin-bottom: $base-unit*5;
+$quote2-mark-width: $base-unit*6;
+$quote2-mark-height: $base-unit*4.4;
+$quote2-mark-top: -$base-unit*2;
+$quote2-mark-left: -$base-unit*6;
+
+// quote 2 stylings
+$quote2-content-font-size: $tc-body-lg;
+$quote2-content-text-color: $tc-black;
+$quote2-content-line-height: $base-unit*7;
+$quote2-user-info-font-size: $tc-body-md;
+$quote2-user-info-text-color: $tc-gray-60;
+
+// Quote 2 mobile
+$quote2-horizontal-padding-mobile: $base-unit*4;
+
+.quote-wrap-2 {
+  @include roboto();
+  position: relative;
+  padding: $quote2-vertical-padding 0;
+  display: flex;
+
+  .user-avatar {
+    flex: none;
+    height: 150px;
+    width: 150px;
+    > img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @media screen and (max-width: $screen-sm), screen and (max-width: $screen-md) {
+    flex-direction: column;
+    padding: 0 $quote2-horizontal-padding-mobile;
+
+    .user-avatar{
+      text-align: center;
+      margin-bottom: $base-unit*5;
+      width: 130px;
+      height: 130px;
+      margin-right: auto;
+      margin-left: auto;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+
+  .content-wrap {
+    margin-left: $quote2-margin-left;
+    position: relative;
+    @media screen and (max-width: $screen-sm), screen and (max-width: $screen-md) {
+      margin-left: 0;
+    }
+
+    &:before {
+      position: absolute;
+      content: '';
+      background-image: url(img/assets/quote-mark.png);
+      background-size: cover;
+      width: $quote2-mark-width;
+      height: $quote2-mark-height;
+      top: $quote2-mark-top;
+      left: $quote2-mark-left;
+      @media screen and (max-width: $screen-sm), screen and (max-width: $screen-md) {
+        top: -$base-unit*4;
+        left:  -$base-unit*2;
+      }
+    }
+
+    .text {
+      @include roboto-light();
+      font-style: oblique;
+      font-size: $quote2-content-font-size;
+      line-height: $quote2-content-line-height;
+      margin-bottom: $quote2-content-margin-bottom;
+      color: $quote2-content-text-color;
+    }
+
+    .user-info {
+      text-align: right;
+      font-size: $quote2-user-info-font-size;
+      color: $quote2-user-info-text-color;
+      
+      .name {
+        @include roboto-bold();
+        
+        &:before {
+          content: '-';
+        }
+      }
+
+      @media screen and (max-width: $screen-sm), screen and (max-width: $screen-md) {
+        text-align: left;
+        span{
+          display: block;
+        }
+        .name{
+          margin-bottom: $base-unit*2;
+        }
+      }
+    }
+  }
+}
+
+// fix for small desktop or tablet
+@media (min-width:$screen-md) and (max-width:$screen-xmd){
+  .carousel-wrap .carousel-navigation {
+    justify-content: left;
+    margin-left: $slider-carousel-item-padding;
+  }
+}

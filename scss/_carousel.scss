@@ -1,0 +1,68 @@
+@import 'tc-includes';
+
+// carousel vars
+$carousel-navigation-bottom: $base-unit*8;
+$carousel-navigation-spacing: $base-unit*1.6;
+$carousel-navigation-arrow-width: $base-unit*2.4;
+$carousel-navigation-arrow-height: $base-unit*4.8;
+
+// carousel stylinga
+$carousel-navigation-text-color: $tc-gray-80;
+
+.carousel-wrap {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+
+  .carousel-slider {
+    height: 100%;
+    transition: all ease 200ms;
+    display: flex;
+    overflow: visible;
+    &-item {
+      position: relative;
+      flex: none;
+      width: 100%;
+      min-height: $carousel-navigation-bottom;
+      img{
+        max-width: 100%;
+      }
+
+      &.current {
+        display: block;
+      }
+    }
+  }
+
+  .carousel-navigation {
+    position: relative;
+    margin-top: -$carousel-navigation-bottom;
+    display: flex;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    justify-content: center;
+    align-items: center;
+    color: $carousel-navigation-text-color;
+
+    .next, .prev {
+      color: $tc-dark-blue-90;
+      width: $carousel-navigation-arrow-width;
+      height: $carousel-navigation-arrow-height;
+      background-repeat: no-repeat;
+      cursor: pointer;
+    }
+
+    .next {
+      background-image: url('img/icons/carret-right.svg');
+    }
+
+    .prev {
+      background-image: url('img/icons/carret-left.svg');
+    }
+
+    .page {
+      margin: 0 $carousel-navigation-spacing;
+      line-height: 20px;
+    }
+  }
+}

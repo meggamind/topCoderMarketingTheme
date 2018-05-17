@@ -1,0 +1,22 @@
+// FIX IE issues
+
+// Fix image with style object-fit: cover in IE
+.image-container {
+  &.image-object-fit {
+    background-size: cover;
+    background-position: center;
+
+    &:before {
+      opacity: 0;
+    }
+
+    img {
+      opacity: 0;
+    }
+  }
+
+  .image-mask {
+    background-size: cover;
+    background-position: center;
+  }
+}
